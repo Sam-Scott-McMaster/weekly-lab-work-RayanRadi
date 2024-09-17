@@ -1,0 +1,1 @@
+ I learned how to open txt files in vim, edit them and save them. I am most scared to learn C and also most excited to learn C because its very good for working at big companies but its very difficult.
