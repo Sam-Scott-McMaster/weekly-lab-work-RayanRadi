@@ -1,0 +1,17 @@
+# 1. Output a lexicon containing all unique words
+cat ~/2XC3-data/gutenberg/english/*.txt | ./split | sort | uniq
+
+# 2. Report how many unique words were found
+cat ~/2XC3-data/gutenberg/english/*.txt | ./split | sort | uniq | wc -l
+
+# 3. Write the lexicon to a file called lexicon.txt
+cat ~/2XC3-data/gutenberg/english/*.txt | ./split | sort | uniq > lexicon.txt
+
+# 4. Display the first word in the lexicon
+cat ~/2XC3-data/gutenberg/english/*.txt | ./split | sort | uniq | head -n 1
+
+# 5. Display the last word in the lexicon
+cat ~/2XC3-data/gutenberg/english/*.txt | ./split | sort | uniq | tail -n 1
+
+# 6. Display the 9998th entry in the lexicon
+cat ~/2XC3-data/gutenberg/english/*.txt | ./split | sort | uniq | sed -n '9998p'

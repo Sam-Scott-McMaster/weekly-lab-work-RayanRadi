@@ -1,0 +1,14 @@
+# 1. Output the average word length for a single Spanish document
+cat ~/2XC3-data/gutenberg/spanish/los_favores_del_mundo.txt | ./split | ./wstat
+
+# 2. Output the average word length for all the Spanish documents
+cat ~/2XC3-data/gutenberg/spanish/*.txt | ./split | ./wstat
+
+# 3. Output the average word length for the first 100 words in all the Spanish documents
+cat ~/2XC3-data/gutenberg/spanish/*.txt | ./split | head -n 100 | ./wstat
+
+# 4. Output the average word length for the last 100 words in all the Spanish documents
+cat ~/2XC3-data/gutenberg/spanish/*.txt | ./split | tail -n 100 | ./wstat
+
+# 5. Output the average word length for all unique words in the Spanish documents
+cat ~/2XC3-data/gutenberg/spanish/*.txt | ./split | sort | uniq | ./wstat
