@@ -6,8 +6,10 @@ if [ $# -ne 0 ]; then
     exit 1
 fi
 
-# Read from standard input until EOF
-while read -r line; do
-    # Use 'tr' to replace spaces with newlines, effectively splitting words
-    echo "$line" | tr ' ' '\n'
+while read line
+do
+	for word in $line
+	do
+		echo $word
+	done
 done
