@@ -1,0 +1,61 @@
+1) 1. REGEX 
+Matching: REGEX  REGEX123 123REGEX
+Non-Matching regex RegEx Re G ex
+
+2.(reg){0,2}ex
+Matching: ex regex regregex
+Non: regeex rex regexex
+
+3.^re*ge+x
+Match: regex reeeeeegex rgeex
+Non : rgx reexy rreeexx
+
+4.re?g?e?x
+Match: rex rx regex
+Nonmatch: reeg grx ex
+
+5.[^regex]
+Match: a b y
+Non match: r e g
+
+6. ^(reg|REG)(ex)\2\1$
+Match: regexexreg REGexexREG regexexreg
+non : rexexrex regexreg regexexREG
+
+2)
+a(ab)*a
+
+Matches: "abababa", "aabababa", "aba"
+
+ab+c
+
+Matches: "abc", "abbb"
+
+a.[bc]+
+
+Matches: "abc", "abcbcbcbc", "ac", "azc"
+
+abc|xyz
+
+Matches: "abc", "xyz"
+
+[a-z]+[\.\?!]
+
+Matches: "swamping.", "undulate?", "jump up."
+
+[a-zA-Z]*[^,]=
+
+
+Matches: "Putt=", "FIdDlE7h=", "Other.="
+
+[a-z][\.\?!]\s+[A-Z]
+
+Matches: "A. B", "g. H", "i? J"
+
+<[^>]+>
+
+Matches: "<an xml tag>", "<opentag>", "<closetag>"
+
+(very )+(important )?(tall|well-dressed) person
+
+Matches: "very important person", "important tall person", "very very well-dressed person"

@@ -1,0 +1,35 @@
+#!/bin/bash
+
+valid_integer_regex='^[-+]?[1-9][0-9]{0,8}$|^0$'
+
+# Check if exactly two arguments are provided
+if [ $# -ne 2 ]; then
+    echo "Error: Exactly two arguments are required." >&2
+    exit 1
+fi
+
+# Check if the first argument is a valid integer
+if [[ ! $1 =~ $valid_integer_regex ]]; then
+    echo "Error: $1 is not a valid integer." >&2
+    exit 2
+fi
+
+# Check if the second argument is a valid integer
+if [[ ! $2 =~ $valid_integer_regex ]]; then
+    echo "Error: $2 is not a valid integer." >&2
+    exit 2
+fi
+
+# Double the integers
+first_double=$(( $1 * 2 ))
+second_double=$(( $2 * 2 ))
+
+# Compare the two doubled integers
+if [ "$first_double" -lt "$second_double" ]; then
+    echo "$first_double"
+elif [ "$first_double" -gt "$second_double" ]; then
+    echo "$second_double"
+else
+    echo "Error: Both arguments are the same when doubled." >&2
+    exit 1
+fi
