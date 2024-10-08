@@ -1,0 +1,10 @@
+C vs Python
+
+One advantage of C is the level of control it gives the programmer over memory management, which can be useful for apps that require high performance.
+In contrast, Python handles memory management for you, making it easier to use but less efficient in high performance cases. Essentially when things get bigger and more complicated and python can't handle it anymore, it doesnt give you the option of putting matters into your own hands. 
+
+One disadvantage of C is that it lacks a true Boolean type, making it easy to write bugs due to unintentional assignments inside conditional statements (for example if (x = 3)).
+Python avoids this problem by having clear distinction between assignment and comparison.
+
+Personally, I prefer using Python for everyday coding tasks due to its simplicity and ease of use, but C is more powerful for low-level programming and offers more control over the system so when I get more used to it i'd likely enjoy using it more because of this extra power it gives me.
+
