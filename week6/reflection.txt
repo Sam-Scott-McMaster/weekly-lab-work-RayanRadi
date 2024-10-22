@@ -1,0 +1,8 @@
+Reflection on the use of the & operator for side effects:
+
+In the lab the digits function uses pointer parameters
+to chang the max and min values outside its scope. This 
+creates side effects by allowing the function to modify external
+variables. This can be useful for efficiency, but it also makes
+functions less predictable as they can change values outside 
+their local scope.

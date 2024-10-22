@@ -1,0 +1,38 @@
+        -:    0:Source:digits.c
+        -:    0:Graph:testdigits-digits.gcno
+        -:    0:Data:testdigits-digits.gcda
+        -:    0:Runs:1
+        -:    1:#include <stdio.h>
+        -:    2:#include "digits.h"
+        -:    3:
+        3:    4:int digits(long n, int *max, int *min) {
+        3:    5:    *max = 0;
+        3:    6:    *min = 9;
+        3:    7:    int sum = 0;
+        -:    8:
+        3:    9:    if (n < 0) {
+        1:   10:        n = -n;
+        -:   11:    }
+        -:   12:
+        3:   13:    if (n == 0) {
+        1:   14:        *max = 0;
+        1:   15:        *min = 0;
+        1:   16:        return 0;
+        -:   17:    }
+        -:   18:
+       10:   19:    while (n > 0) {
+        8:   20:        int digit = n % 10;
+        8:   21:        sum += digit;
+        -:   22:
+        8:   23:        if (digit > *max) {
+        5:   24:            *max = digit;
+        -:   25:        }
+        8:   26:        if (digit < *min) {
+        5:   27:            *min = digit;
+        -:   28:        }
+        -:   29:
+        8:   30:        n /= 10;
+        -:   31:    }
+        -:   32:
+        2:   33:    return sum;
+        -:   34:}
