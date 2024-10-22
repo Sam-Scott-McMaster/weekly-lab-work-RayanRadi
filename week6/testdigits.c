@@ -6,7 +6,7 @@ int main() {
     int min, max, sum;
     long n;
 
-    // Original test case
+    // test case
     n = 1234;
     sum = digits(n, &max, &min);
     printf("%ld: sum %d, min %d, max %d\n", n, sum, min, max);

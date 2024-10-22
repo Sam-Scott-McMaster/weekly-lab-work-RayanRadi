@@ -3,6 +3,10 @@ Reflection on the use of the & operator for side effects:
 In the lab the digits function uses pointer parameters
 to chang the max and min values outside its scope. This 
 creates side effects by allowing the function to modify external
-variables. This can be useful for efficiency, but it also makes
+variables. This can be useful for efficiency and not having to re define
+the function over and over again, but it also makes
 functions less predictable as they can change values outside 
-their local scope.
+their local scope, and if you want to do things to those values 
+multiple times you have to know in your head what would happen to them since
+you cant re-initialize the values you manually inputed after every time a function is 
+run and those values are changed. They change for good (during the runtime of the code).
