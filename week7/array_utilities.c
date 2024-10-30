@@ -29,3 +29,12 @@ int count(int array[], int size, int key) {
     }
     return count;
 }
+
+int count2d(int rows, int cols, int array[rows][cols], int key) {
+    int total_count = 0;
+    for (int i = 0; i < rows; i++) {
+        total_count += count(array[i], cols, key);  
+    }
+    return total_count;
+}
+

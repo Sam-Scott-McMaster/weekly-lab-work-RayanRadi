@@ -1,0 +1,9 @@
+In C you can treat an array as an indexed data structure and process it with the [] operator, or you
+can treat it as a pointer into memory and process it with the * operator and pointer arithmetic. What
+is one advantage you can see to processing using pointer arithmetic. What is one disadvantage?
+Which style of coding do you prefer and why?
+
+Using pointer arithmetic in C can make code faster since it avoids extra indexing steps and provides direct memory access. 
+However, it can make the code harder to read and debug, especially for beginners. Personally, I prefer using array 
+indexing for clarity, but I see the benefits of pointers for performance in more complex tasks.
+
