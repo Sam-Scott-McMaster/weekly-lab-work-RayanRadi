@@ -1,0 +1,22 @@
+a. Is it generally a good idea to remove function calls from a program? What trade-offs exist between performance improvements and code quality?
+
+Removing function calls can improve performance by eliminating call overhead, which is helpful in repetitive tasks. 
+However, it can reduce readability and make code harder to maintain. Functions are more modular and clear, so removing 
+calls should only be done when performance is a top priority.
+
+b. When removing function calls, is it better to use a parameterized macro or inline code?
+
+Parameterized macros are useful for reusability and avoiding repeated code but they lac type safety and can lead to bugs. 
+Simple inline code is safer when clarity is needed. For more complex replacements, macros are better if you know what your doing.
+
+c. Which gave better performance: removing function calls or improving the algorithm?
+
+Improving the algorithm (checking up to the square root of n) had a much bigger impact than removing 
+function calls. The gprof data showed fewer checkfactor calls, which reduced execution time significantly. 
+Optimizing the logic had a larger effect than just removing calls.
+
+d. When is it useful to remove function calls?
+
+Removing function calls is helpful in loops where functions are called often, and every bit of speed matters, especially in large project for big companies.
+Inline code or macros can cut down on function call overhead, which is useful for very small functions in performance-critical 
+parts of the code.
